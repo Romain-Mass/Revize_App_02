@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const formulaire = document.getElementById('inscriptionForm');
 
   if (!formulaire) {
-    console.log('Formulaire introuvable.');
     return;
   }
 
@@ -17,18 +16,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (prenom === '' || email === '' || password === '') {
       alert('Veuillez remplir tous les champs.');
+
       return;
     }
 
-    const utilisateur = {
-      prenom: prenom,
-      email: email,
-      dateCreation: new Date().toISOString(),
-    };
+    const resultat = RevizeAuth.creerUtilisateur(prenom, email);
 
-    localStorage.setItem('revize_utilisateur', JSON.stringify(utilisateur));
+    if (!resultat.succes) {
+      alert(resultat.message);
 
-    console.log('Utilisateur sauvegardé :', utilisateur);
+      return;
+    }
+
+    console.log('Compte créé :', resultat.utilisateur);
 
     window.location.href = './compte.html';
   });

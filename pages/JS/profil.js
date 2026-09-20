@@ -1,17 +1,19 @@
-function afficherProfil() {
-  const utilisateurSauvegarde = localStorage.getItem('revize_utilisateur');
+document.addEventListener('DOMContentLoaded', function () {
+  const utilisateur = RevizeAuth.recupererUtilisateurConnecte();
 
   const avatar = document.getElementById('User');
 
-  if (!utilisateurSauvegarde || !avatar) {
+  if (!utilisateur) {
+    console.log('Aucun utilisateur connecté.');
+
+    window.location.href = './inscription.html';
+
     return;
   }
 
-  const utilisateur = JSON.parse(utilisateurSauvegarde);
-
-  if (utilisateur.prenom) {
-    avatar.textContent = utilisateur.prenom.trim().charAt(0).toUpperCase();
+  if (avatar) {
+    avatar.textContent = RevizeAuth.obtenirInitiale(utilisateur);
   }
-}
 
-window.addEventListener('pageshow', afficherProfil);
+  console.log('Utilisateur récupéré :', utilisateur);
+});
