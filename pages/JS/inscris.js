@@ -30,6 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.log('Utilisateur sauvegardé :', utilisateur);
 
-    window.location.href = '/pages/compte.html';
+    window.location.href = './compte.html';
   });
 });
