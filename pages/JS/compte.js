@@ -1,31 +1,37 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const utilisateur = RevizeAuth.recupererUtilisateurConnecte();
+document.addEventListener("DOMContentLoaded", function () {
+	const utilisateur = RevizeAuth.recupererUtilisateurConnecte();
 
-  if (!utilisateur) {
-    window.location.href = './inscription.html';
+	if (!utilisateur) {
+		window.location.href = "./inscription.html";
 
-    return;
-  }
+		return;
+	}
 
-  const zoneNom = document.getElementById('userName');
+	const zoneNom = document.getElementById("userName");
 
-  const zoneEmail = document.getElementById('userEmail');
+	const zoneEmail = document.getElementById("userEmail");
 
-  const boutonDeconnexion = document.getElementById('logoutButton');
+	const revizCours = document.getElementById("reviz");
 
-  if (zoneNom) {
-    zoneNom.textContent = utilisateur.prenom;
-  }
+	revizCours.addEventListener("click", () => {
+		window.location.href = "./choice.html";
+	});
 
-  if (zoneEmail) {
-    zoneEmail.textContent = utilisateur.email;
-  }
+	const boutonDeconnexion = document.getElementById("logoutButton");
 
-  if (boutonDeconnexion) {
-    boutonDeconnexion.addEventListener('click', function () {
-      RevizeAuth.seDeconnecter();
+	if (zoneNom) {
+		zoneNom.textContent = utilisateur.prenom;
+	}
 
-      window.location.href = './inscription.html';
-    });
-  }
+	if (zoneEmail) {
+		zoneEmail.textContent = utilisateur.email;
+	}
+
+	if (boutonDeconnexion) {
+		boutonDeconnexion.addEventListener("click", function () {
+			RevizeAuth.seDeconnecter();
+
+			window.location.href = "./inscription.html";
+		});
+	}
 });

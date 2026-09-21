@@ -1,19 +1,19 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const utilisateur = RevizeAuth.recupererUtilisateurConnecte();
+document.addEventListener("DOMContentLoaded", function () {
+	const utilisateur = RevizeAuth.recupererUtilisateurConnecte();
 
-  const avatar = document.getElementById('User');
+	const avatar = document.getElementById("User");
 
-  if (!utilisateur) {
-    console.log('Aucun utilisateur connecté.');
+	if (!utilisateur) {
+		console.log("Aucun utilisateur connecté.");
 
-    window.location.href = './inscription.html';
+		window.location.href = "./inscription.html";
 
-    return;
-  }
+		return;
+	}
 
-  if (avatar) {
-    avatar.textContent = RevizeAuth.obtenirInitiale(utilisateur);
-  }
+	if (avatar) {
+		avatar.textContent = RevizeAuth.obtenirInitiale(utilisateur);
+	}
 
-  console.log('Utilisateur récupéré :', utilisateur);
+	console.log("Utilisateur récupéré :", utilisateur);
 });

@@ -1,25 +1,25 @@
-'use strict';
+"use strict";
 
-document.addEventListener('click', function (event) {
-  const bouton = event.target.closest('.quiz-button');
+document.addEventListener("click", function (event) {
+	const bouton = event.target.closest(".quiz-button");
 
-  if (!bouton) {
-    return;
-  }
+	if (!bouton) {
+		return;
+	}
 
-  event.preventDefault();
+	event.preventDefault();
 
-  const matiere = bouton.dataset.matiere;
+	const matiere = bouton.dataset.matiere;
 
-  if (!matiere) {
-    console.error('Le bouton ne possède pas de matière.');
+	if (!matiere) {
+		console.error("Le bouton ne possède pas de matière.");
 
-    return;
-  }
+		return;
+	}
 
-  console.log('Matière sélectionnée :', matiere);
+	console.log("Matière sélectionnée :", matiere);
 
-  const matiereEncodee = encodeURIComponent(matiere);
+	const matiereEncodee = encodeURIComponent(matiere);
 
-  window.location.assign('./quiz.html?matiere=' + matiereEncodee);
+	window.location.assign("./quiz.html?matiere=" + matiereEncodee);
 });

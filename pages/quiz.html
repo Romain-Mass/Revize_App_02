@@ -1,64 +1,65 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz | Revize</title>
-    <link rel="stylesheet" href="../Styles/styles6.css" />
-  </head>
-  <body>
-    <header>
-      <nav aria-label="Navigation principale">
-        <div>
-          <img src="../assets/icons/Revize.svg" alt="Icon" />
-          <a href="#accueil" id="Revize" aria-label="Retour à l'accueil">
-            Revize
-          </a>
-        </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz | Revize</title>
+		<link rel="stylesheet" href="../Styles/styles6.css" />
+	</head>
+	<body>
+		<header>
+			<nav aria-label="Navigation principale">
+				<div>
+					<img src="../assets/icons/Revize.svg" alt="Icon" />
+					<a href="#accueil" id="Revize" aria-label="Retour à l'accueil">
+						Revize
+					</a>
+				</div>
 
-        <ul>
-          <li>
-            <a href="#fonctionnement">Fonctionnement</a>
-          </li>
-          <li>
-            <a href="#fonctionnalites">Fonctionnalités</a>
-          </li>
-          <li>
-            <a href="#public">Pour qui ?</a>
-          </li>
-        </ul>
-        <div class="user" aria-label="Avatar de l'utilisateur">
-          <h2 id="User"></h2>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <h1 id="titreQuiz"></h1>
+				<ul>
+					<li>
+						<a href="#fonctionnement">Fonctionnement</a>
+					</li>
+					<li>
+						<a href="#fonctionnalites">Fonctionnalités</a>
+					</li>
+					<li>
+						<a href="#public">Pour qui ?</a>
+					</li>
+				</ul>
+				<div class="user" aria-label="Avatar de l'utilisateur">
+					<h2 id="User"></h2>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<h1 id="titreQuiz"></h1>
 
-      <p id="compteurQuestion"></p>
+			<p id="compteurQuestion"></p>
 
-      <h2 id="texteQuestion"></h2>
+			<h2 id="texteQuestion"></h2>
 
-      <div id="listeReponses"></div>
+			<div id="listeReponses"></div>
 
-      <p id="feedback"></p>
+			<p id="feedback"></p>
 
-      <button id="questionSuivante" type="button" hidden>
-        Question suivante
-      </button>
+			<button id="questionSuivante" type="button" hidden>
+				Question suivante
+			</button>
 
-      <section id="resultatFinal" hidden>
-        <h2>Quiz terminé</h2>
+			<section id="resultatFinal" hidden>
+				<h2>Quiz terminé</h2>
 
-        <p id="scoreFinal"></p>
+				<p id="scoreFinal"></p>
 
-        <button id="retourChoix" type="button">
-          Retour au choix des matières
-        </button>
-      </section>
-    </main>
+				<button id="retourChoix" type="button">
+					Retour au choix des matières
+				</button>
+			</section>
+		</main>
 
-    <script src="./JS/storage.js" defer></script>
-    <script src="./JS/quizs.js" defer></script>
-  </body>
+		<script src="./JS/storage.js" defer></script>
+		<script src="./JS/profil.js"></script>
+		<script src="./JS/quizs.js" defer></script>
+	</body>
 </html>
