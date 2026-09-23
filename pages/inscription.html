@@ -19,12 +19,13 @@
 			</nav>
 		</header>
 		<main>
-			<form id="inscriptionForm">
+			<form>
 				<h2>Créer un compte</h2>
 				<div class="form">
-					<label for="first-Name">
+					<label>
 						Prénom
 						<input
+							autocomplete="given-name"
 							type="text"
 							name="firstName"
 							id="firstName"
@@ -32,19 +33,21 @@
 							required
 						/>
 					</label>
-					<label for="email">
+					<label>
 						EMAIL
 						<input
-							type="email"
+							autocomplete="off"
+							type="text"
 							name="email"
 							id="email"
 							placeholder="toto@test.fr"
 							required
 						/>
 					</label>
-					<label for="password">
+					<label>
 						Password
 						<input
+							autocomplete="current-password"
 							type="password"
 							name="password"
 							id="password"
@@ -54,10 +57,10 @@
 					</label>
 				</div>
 				<button type="submit">S'inscrire</button>
-				<a href="./connexion.html">Déjà un compte ?</a>
+				<a href="/pages/connexion.html">Déjà un compte ?</a>
 			</form>
 		</main>
 		<script src="./JS/storage.js" defer></script>
-		<script src="./JS/inscris.js"></script>
+		<script src="./JS/inscris.js" defer></script>
 	</body>
 </html>

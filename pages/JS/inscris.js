@@ -1,35 +1,35 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const formulaire = document.getElementById('inscriptionForm');
+document.addEventListener("DOMContentLoaded", function () {
+	const formulaire = document.querySelector("form");
 
-  if (!formulaire) {
-    return;
-  }
+	if (!formulaire) {
+		return;
+	}
 
-  formulaire.addEventListener('submit', function (event) {
-    event.preventDefault();
+	formulaire.addEventListener("submit", function (event) {
+		event.preventDefault();
 
-    const prenom = document.getElementById('firstName').value.trim();
+		const prenom = document.getElementById("firstName").value.trim();
 
-    const email = document.getElementById('email').value.trim();
+		const email = document.getElementById("email").value.trim();
 
-    const password = document.getElementById('password').value.trim();
+		const password = document.getElementById("password").value.trim();
 
-    if (prenom === '' || email === '' || password === '') {
-      alert('Veuillez remplir tous les champs.');
+		if (prenom === "" || email === "" || password === "") {
+			alert("Veuillez remplir tous les champs.");
 
-      return;
-    }
+			return;
+		}
 
-    const resultat = RevizeAuth.creerUtilisateur(prenom, email);
+		const resultat = RevizeAuth.creerUtilisateur(prenom, email);
 
-    if (!resultat.succes) {
-      alert(resultat.message);
+		if (!resultat.succes) {
+			alert(resultat.message);
 
-      return;
-    }
+			return;
+		}
 
-    console.log('Compte créé :', resultat.utilisateur);
+		console.log("Compte créé :", resultat.utilisateur);
 
-    window.location.href = './compte.html';
-  });
+		window.location.href = "./compte.html";
+	});
 });

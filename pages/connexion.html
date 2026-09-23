@@ -1,52 +1,55 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Connexion</title>
-    <link rel="icon" type="image/x-icon" href="/assets/icons/Revize.svg" />
-    <link rel="stylesheet" href="../Styles/styles3.css" />
-  </head>
-  <body>
-    <header>
-      <nav aria-label="Navigation principale">
-        <div>
-          <img src="../assets/icons/Revize.svg" alt="Icon" />
-          <a href="#accueil" id="Revize" aria-label="Retour à l'accueil">
-            Revize
-          </a>
-        </div>
-      </nav>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Connexion</title>
+		<link rel="icon" type="image/x-icon" href="/assets/icons/Revize.svg" />
+		<link rel="stylesheet" href="../Styles/styles3.css" />
+	</head>
+	<body>
+		<header>
+			<nav aria-label="Navigation principale">
+				<div>
+					<img src="../assets/icons/Revize.svg" alt="Icon" />
+					<a href="#accueil" id="Revize" aria-label="Retour à l'accueil">
+						Revize
+					</a>
+				</div>
+			</nav>
+		</header>
 
-    <main>
-      <form>
-        <h2>Connexion</h2>
-        <div>
-          <label for="email">
-            EMAIL
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="toto@test.fr"
-            />
-          </label>
-          <label for="password">
-            Mot de Passe
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Entrer un mot de passe"
-            />
-          </label>
-        </div>
+		<main>
+			<form>
+				<h2>Connexion</h2>
+				<div>
+					<label for="email">
+						EMAIL
+						<input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="toto@test.fr"
+						/>
+					</label>
+					<label for="password">
+						Mot de Passe
+						<input
+							type="password"
+							name="password"
+							id="password"
+							placeholder="Entrer un mot de passe"
+						/>
+					</label>
+				</div>
 
-        <button type="submit">Se connecter</button>
+				<button type="submit">Se connecter</button>
 
-        <a href="/pages/inscription.html">Pas encore de compte ?</a>
-      </form>
-    </main>
-  </body>
+				<a href="/pages/inscription.html">Pas encore de compte ?</a>
+			</form>
+		</main>
+
+		<script src="./JS/storage.js" defer></script>
+		<script src="./JS/profil.js" defer></script>
+	</body>
 </html>
