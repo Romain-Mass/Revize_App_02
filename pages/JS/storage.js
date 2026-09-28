@@ -96,12 +96,12 @@ window.RevizeAuth = {
 	},
 
 	seDeconnecter: function () {
-		localStorage.removeItem("revize_current_user");
+		localStorage.removeItem("revize_user");
 	},
 
 	// AJOUT : Sauvegarder le pourcentage d'une matière pour l'utilisateur connecté
 	sauvegarderScoreMatiere: function (idMatiere, score) {
-		const utilisateurId = localStorage.getItem("revize_current_user_id");
+		const utilisateurId = localStorage.getItem("revize_user");
 		if (!utilisateurId) return;
 
 		const utilisateurs = this.lireUtilisateurs();

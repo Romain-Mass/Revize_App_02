@@ -12,20 +12,20 @@ const quizsParDefaut = [
 		questions: [
 			{
 				id: 1,
-				question: "À quoi sert le HTML ?",
+				question: "A quoi sert le HTML ?",
 				reponses: [
-					"À créer la structure d'une page",
-					"À créer uniquement des animations",
-					"À gérer une base de données",
+					"A créer la structure d'une page",
+					"A créer uniquement des animations",
+					"A gérer une base de données",
 				],
 				bonneReponse: 0,
 				explication:
-					"Le HTML sert à créer la structure et le contenu d'une page.",
+					"Le HTML sert a créer la structure et le contenu d'une page.",
 			},
 
 			{
 				id: 2,
-				question: "Quel élément contient le contenu visible d'une page ?",
+				question: "Quel balise contient le contenu visible d'une page ?",
 				reponses: ["head", "body", "title"],
 				bonneReponse: 1,
 				explication: "L'élément body contient le contenu visible de la page.",
@@ -33,19 +33,28 @@ const quizsParDefaut = [
 
 			{
 				id: 3,
-				question: 'Peut ton mettre plusieurs "h1" sur la même page ?',
+				question: 'Peut ton mettre plusieurs balise "h1" sur la mÃªme page ?',
 				reponses: ["Oui", "Non"],
 				bonneReponse: 1,
 				explication:
-					"L'élément h1 ne peut pas être mis sur une même page mais tous les autres titre si",
+					"L'élément h1 ne peut pas être mis sur une même page mais tous les autres titre si.",
 			},
 
 			{
 				id: 4,
-				question: "Quel élément permet de créer une liste à puces ?",
+				question: "Quel balise permet de créer une liste a puces ?",
 				reponses: ["ul", "li", "ol"],
 				bonneReponse: 2,
-				explication: "L'élément ol permet de créer une liste numéroté.",
+				explication: "L'élément ol permet de créer une liste numérotée.",
+			},
+
+			{
+				id: 5,
+				question: "Quel balise permet de créer un espace entre deux éléments ?",
+				reponses: ["br", "marg", "hr"],
+				bonneReponse: 0,
+				explication:
+					"La balise br permet de créer un espace entre deux éléments.",
 			},
 		],
 	},
@@ -57,14 +66,14 @@ const quizsParDefaut = [
 		questions: [
 			{
 				id: 1,
-				question: "À quoi sert le CSS ?",
+				question: "A quoi sert le CSS ?",
 				reponses: [
-					"À styliser une page",
-					"À créer une base de données",
-					"À structurer la page HTML",
+					"A styliser une page",
+					"A créer une base de données",
+					"A structurer la page HTML",
 				],
 				bonneReponse: 0,
-				explication: "Le CSS sert à gérer l'apparence et la mise en page.",
+				explication: "Le CSS sert Ã  gérer l'apparence et la mise en page.",
 			},
 
 			{
@@ -82,7 +91,7 @@ const quizsParDefaut = [
 				reponses: ["text-shadow", "shadow-box", "box-shadow"],
 				bonneReponse: 1,
 				explication:
-					"La propriété shadow-box sert a ajouter une ombre autour a un élément ?",
+					"La propriÃ©tÃ© shadow-box sert a ajouter une ombre autour a un élément ?",
 			},
 
 			{
@@ -121,6 +130,16 @@ const quizsParDefaut = [
 				explication:
 					"La propriété galign-self sert a aligner les éléments au centre dans le tableau.",
 			},
+
+			{
+				id: 7,
+				question:
+					"Quelle propriété css sert a aligner les éléments du container en ligne ?",
+				reponses: ["display", "justify-content", "flec-direction"],
+				bonneReponse: 2,
+				explication:
+					"La propriété galign-self sert a aligner les éléments au centre dans le tableau.",
+			},
 		],
 	},
 
@@ -131,14 +150,14 @@ const quizsParDefaut = [
 		questions: [
 			{
 				id: 1,
-				question: "À quoi sert JavaScript ?",
+				question: "A quoi sert JavaScript ?",
 				reponses: [
-					"À ajouter de l'interactivité",
-					"À créer uniquement des images",
-					"À remplacer le navigateur",
+					"A ajouter de l'interactivité",
+					"A créer uniquement des images",
+					"A remplacer le navigateur",
 				],
 				bonneReponse: 0,
-				explication: "JavaScript permet de rendre une page interactive.",
+				explication: "Le JavaScript permet de rendre une page interactive.",
 			},
 
 			{
@@ -152,19 +171,20 @@ const quizsParDefaut = [
 			{
 				id: 3,
 				question: "Quel signe JavaScrit est utilisé pour faire un modulo ?",
-				reponses: ["+", "%", "&"],
+				reponses: [" + ", " % ", " & "],
 				bonneReponse: 1,
-				explication: "Le signe % permet de calculer un modulo.",
+				explication:
+					"Le signe '%' permet de calculer le reste de la division euclidienne.",
 			},
 
 			{
 				id: 4,
 				question:
 					"Quel signe JavaScrit est utilisé pour faire une multiplication ?",
-				reponses: ["/", "%", "*"],
+				reponses: [" / ", " % ", " * "],
 				bonneReponse: 2,
 				explication:
-					"Le signe * permet de faire une multipliation de deux nombres.",
+					"Le signe '*' permet de faire une multipliation de deux nombres.",
 			},
 
 			{
@@ -186,6 +206,46 @@ const quizsParDefaut = [
 				explication:
 					"Le mot-clé let permet de déclarer une variable modifiable.",
 			},
+
+			{
+				id: 7,
+				question: 'Quel est la définition de "Algo" ?',
+				reponses: [
+					"une suite d instructions sert suivre dans un ordre précis pour résoudre un problème",
+					"Un algorithme est un langage de programmation.",
+					"Un algorithme est une formule mathématique complexe réservée aux ordinateurs",
+				],
+				bonneReponse: 0,
+				explication:
+					"L'Algo est une suite d instructions qu'on donne dans un ordre précis.",
+			},
+
+			{
+				id: 8,
+				question: "Comment ecrit ton une condition ?",
+				reponses: [
+					"if () {} else {}...",
+					"else () {} if {}...",
+					"if () {} else if () {} else {}...",
+				],
+				bonneReponse: [0, 2],
+				explication:
+					"Le mot-clé let permet de déclarer une variable modifiable.",
+			},
+
+			{
+				id: 9,
+				question: "Comment selectionne t-on un élément en JS ?",
+				reponses: [
+					"querySeector()",
+					"ClassName()",
+					"getElementById()",
+					"ClassList.add()",
+				],
+				bonneReponse: [0, 2],
+				explication:
+					"Le mot-clé 'let' permet de déclarer une variable modifiable.",
+			},
 		],
 	},
 
@@ -203,7 +263,16 @@ const quizsParDefaut = [
 					"Coummunication Sans Violence",
 				],
 				bonneReponse: 1,
-				explication: "La Communication Non Viloente à été créer pour",
+				explication: "La Communication Non Viloente sert créer pour",
+			},
+
+			{
+				id: 2,
+				question: "Que cache souvent derrière un sentiment ?",
+				reponses: ["Un besoin", "rien", "Un comportement"],
+				bonneReponse: 0,
+				explication:
+					"Le besoin de cache derrière son sentiment pendant le moment.",
 			},
 		],
 	},
@@ -211,7 +280,7 @@ const quizsParDefaut = [
 	{
 		id: "francais-01",
 		matiere: "Français",
-		titre: "Quiz de français",
+		titre: "Quiz de franÃ§ais",
 		questions: [
 			{
 				id: 1,
@@ -238,7 +307,7 @@ const quizsParDefaut = [
 				question: "Combien font 2 + 2 ?",
 				reponses: ["3", "4", "5"],
 				bonneReponse: 1,
-				explication: "2 + 2 est égal à 4.",
+				explication: "2 + 2 est égal a  4.",
 			},
 		],
 	},
@@ -267,12 +336,12 @@ const quizsParDefaut = [
 				id: 1,
 				question: "Qu'étudie principalement l'histoire ?",
 				reponses: [
-					"Les événements du passé",
+					"Les évènements du passé",
 					"Les planètes",
 					"Les formules mathématiques",
 				],
 				bonneReponse: 0,
-				explication: "L'histoire étudie les événements du passé.",
+				explication: "L'histoire étudie les évènements du passé.",
 			},
 		],
 	},
@@ -292,7 +361,7 @@ const quizsParDefaut = [
 				],
 				bonneReponse: 0,
 				explication:
-					"La géographie étudie les territoires, les populations et leurs relations.",
+					"La gÃ©ographie étudie les territoires, les populations et leurs relations.",
 			},
 		],
 	},
@@ -324,7 +393,7 @@ if (versionSauvegardee !== versionQuiz) {
 			dataQuizs = quizsParDefaut;
 		}
 	} catch (erreur) {
-		console.error("Impossible de charger les quiz sauvegardés.", erreur);
+		console.error("Impossible de charger les quiz sauvegardÃ©s.", erreur);
 
 		dataQuizs = quizsParDefaut;
 	}
@@ -373,7 +442,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	/* =========================
-       Récupération de la matière
+       RÃ©cupÃ©ration de la matiÃ¨re
     ========================= */
 
 	const parametres = new URLSearchParams(window.location.search);
@@ -385,7 +454,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	/* =========================
-       Éléments HTML
+       Ã‰lÃ©ments HTML
     ========================= */
 
 	const titreQuiz = document.getElementById("titreQuiz");
@@ -414,7 +483,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		!resultatFinal ||
 		!scoreFinal
 	) {
-		console.error("Un ou plusieurs éléments HTML du quiz sont introuvables.");
+		console.error("Un ou plusieurs Ã©lÃ©ments HTML du quiz sont introuvables.");
 
 		return;
 	}
@@ -422,7 +491,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	if (!quizSelectionne) {
 		titreQuiz.textContent = "Quiz introuvable";
 
-		texteQuestion.textContent = "Aucun quiz ne correspond à cette matière.";
+		texteQuestion.textContent = "Aucun quiz ne correspond Ã  cette matiÃ¨re.";
 
 		compteurQuestion.textContent = "";
 
@@ -491,7 +560,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	/* =========================
-       Vérifier une réponse
+       VÃ©rifier une rÃ©ponse
     ========================= */
 
 	function verifierReponse(indexReponseChoisie, boutonClique) {
@@ -563,7 +632,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	/* =========================
-       Afficher le résultat
+       Afficher le rÃ©sultat
     ========================= */
 
 	function afficherResultat() {
@@ -590,7 +659,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	/* =========================
-       Sauvegarder le résultat
+       Sauvegarder le rÃ©sultat
     ========================= */
 
 	function sauvegarderResultat() {
@@ -634,7 +703,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		console.log("Résultat sauvegardé :", nouveauResultat);
 	} /* =========================
-       Démarrage du quiz
+       DÃ©marrage du quiz
     ========================= */
 
 	afficherQuestion();
